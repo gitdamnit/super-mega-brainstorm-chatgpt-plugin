@@ -12,4 +12,4 @@ For mixed files, executable code portions fall under MPL-2.0 and original prose 
 
 Both licenses allow commercial use subject to their conditions. Neither license gives exclusive rights over abstract ideas or methods.
 
-The license URLs above are references to the complete legal texts; the project should include local copies of both licenses in its final release archive.
+Complete license texts are included locally as `LICENSES/MPL-2.0.txt` and `LICENSES/CC-BY-SA-4.0.txt`. Include both in the final release archive.
