@@ -88,16 +88,18 @@ Maintained by **Evan Zellner**. The v0.2.0 behavioral specification was develope
 
 This is an independent community project, **not an official or OpenAI-verified product**.
 
-## Licensing direction
+## Licensing
 
-The project is evaluating a **component-based licensing approach**:
+Copyright © 2026 Evan Zellner.
 
-- **Plugin software and integration code:** Mozilla Public License 2.0 (MPL-2.0).
-- **Original written brainstorming methodology, `SKILL.md`, and supporting reference materials:** Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0), subject to review of any executable or tightly integrated material.
-- **Avatar, promotional artwork, project name, and branding:** Rights reserved separately; no permission to reuse these assets is implied by the proposed software or documentation licenses.
+This project uses component-based licensing:
 
-**Status: proposed, not yet adopted.** Until the appropriate license texts, file-level boundaries, third-party rights review, and repository metadata are finalized, the public repository should **not** be treated as already licensed under MPL-2.0 or CC BY-SA 4.0. Public visibility alone does not grant general permission to reproduce, modify, or redistribute copyrighted material. Commercial use would be permitted under both proposed licenses, subject to their respective terms.
+- **MPL-2.0:** Software, executable scripts, tests, and plugin integration code.
+- **CC BY-SA 4.0:** Original written brainstorming methodology, explanatory references, and documentation.
+- **All rights reserved:** Original avatar illustrations, logos, promotional graphics, and project branding.
 
-This split is intended to encourage reuse while requiring sharing of modifications to covered software files and adaptations of the written methodology. It does not confer ownership over abstract brainstorming techniques or prohibit independent implementations.
+See [licensing boundaries](LICENSES/README.md) and the [artwork notice](LICENSES/ARTWORK-NOTICE.md) for details. Both open licenses permit commercial use subject to their conditions. Third-party material retains its own terms.
+
+**Release note:** The complete legal texts must be bundled into the final distribution ZIP before publication. Licensing boundaries for mixed code-and-prose files should be reviewed during the final audit.
 
 [Installation notes](docs/INSTALLATION.md) · [Plugin versus original skill](docs/PLUGIN_VS_SKILL.md)
