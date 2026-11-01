@@ -1,4 +1,7 @@
-# SUPER MEGA BRAINSTORM
+# SUPER MEGA BRAINSTORM PLUGIN FOR CHATGPT
+
+<img width="874" height="487" alt="image" src="https://github.com/user-attachments/assets/927aed46-a15f-4e21-a3a2-fe4c4140fbb3" />
+
 
 ### The ChatGPT plugin for ideas that survive scrutiny.
 
