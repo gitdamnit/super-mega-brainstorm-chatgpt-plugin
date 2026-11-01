@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "super-mega-brainstorm",
+  "version": "0.2.0",
+  "description": "Model-agnostic, evidence-driven brainstorming with an Advanced Smell Test, fallacy and formal-argument auditing, and full local reference corpus.",
+  "author": {
+    "name": "Evan Zellner",
+    "url": "https://github.com/gitdamnit"
+  },
+  "homepage": "https://github.com/gitdamnit/brainstorm",
+  "repository": "https://github.com/gitdamnit/brainstorm",
+  "keywords": [
+    "brainstorming",
+    "critical-thinking",
+    "evidence",
+    "formal-logic",
+    "decision-making"
+  ]
+}

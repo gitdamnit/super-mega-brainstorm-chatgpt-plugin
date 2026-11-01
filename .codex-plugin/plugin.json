@@ -1,0 +1,23 @@
+{
+  "author": {
+    "name": "Evan Zellner"
+  },
+  "description": "Model-agnostic, evidence-driven brainstorming with an Advanced Smell Test, fallacy and formal-argument auditing, and full local reference corpus.",
+  "interface": {
+    "capabilities": [],
+    "category": "Other",
+    "defaultPrompt": null,
+    "developerName": "Evan Zellner",
+    "displayName": "Super Mega Brainstorm",
+    "longDescription": "A reasoning-first brainstorming workflow that explores mechanisms, challenges assumptions, evaluates evidence, red-teams proposals, and applies a mandatory Advanced Smell Test and formal logic gate.",
+    "shortDescription": "Brainstorm boldly. Audit ruthlessly."
+  },
+  "keywords": [
+    "brainstorming",
+    "critical-thinking",
+    "logic"
+  ],
+  "name": "super-mega-brainstorm",
+  "skills": "./skills",
+  "version": "0.2.0"
+}

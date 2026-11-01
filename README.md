@@ -1,176 +1,90 @@
-# Brainstorm Universal Agent Skill
+# SUPER MEGA BRAINSTORM
 
-A production-quality, portable, platform-independent Agent Skill for structured brainstorming that produces genuinely different, constraint-aware options and converges on actionable decisions.
+### The ChatGPT plugin for ideas that survive scrutiny.
 
-## Overview
+**Brainstorm without the bullshit.** Super Mega Brainstorm explores possibilities and then makes the reasoning earn its keep. It is a reusable workflow for strategic decisions, research, product design, technical planning, creative problems, and arguments that sound persuasive but might be completely wrong.
 
-This skill implements a rigorous brainstorming methodology that:
-- Produces **structurally different** ideas (not cosmetic variations)
-- Anchors to **actual project constraints** and context
-- Explicitly states **costs, trade-offs, and dependencies** for every option
-- Includes **exactly one deliberately absurd idea** per session
-- **Kills weak ideas** with clear reasons
-- **Ranks** surviving options with winner-versus-runner-up justification
-- States **overturn conditions** (what would change the recommendation)
-- Provides a **concrete next action**
-- Separates **rejected** and **parked** ideas
+This repository packages **Super Mega Brainstorm for ChatGPT** as a portable [Agent Plugin](https://agent-plugins.org/specification), with the complete original reasoning workflow bundled under [`skills/super-mega-brainstorm-skill/`](skills/super-mega-brainstorm-skill/).
 
-## Package Structure
+**Version 0.2.0 · Feature-complete prototype · Created by Evan Zellner**
 
+## What it does
+
+- **Diverges first.** Explores materially different mechanisms, not 20 superficial variations.
+- **Recombines ideas.** Finds connections, contradictions, and missed possibilities.
+- **Evaluates openly.** Weighs benefits, assumptions, trade-offs, risks, and a real *do-nothing* baseline.
+- **Red-teams its own recommendations.** Looks for alternative explanations and conditions that would overturn the answer.
+- **Runs the Advanced Smell Test.** Applies the bundled fallacy atlas, evidence standards, causal and statistical checks, and reasoning audit.
+- **Checks formal arguments.** Distinguishes logical validity from the truth of real-world premises. Includes optional offline truth-table and categorical checkers.
+- **Allows uncomfortable answers.** One defensible option, several, postponement, or **NO DEFENSIBLE SOLUTION IDENTIFIED** are all valid outcomes.
+
+### How the complete workflow fits together
+
+`Frame → Evidence → Baseline → Diverge → Connect → Evaluate → Attack → Smell Test → Formal argument gate → Decision record`
+
+Every invocation uses stages **0–10**, without a fake quick mode or required idea quota. See [the full specification](skills/super-mega-brainstorm-skill/SKILL.md).
+
+## Using it in ChatGPT
+
+If **Super Mega Brainstorm** is available through your ChatGPT Plugin Directory or a supported share, install it using ChatGPT's normal plugin flow. Then invoke the plugin in a chat:
+
+```text
+@super-mega-brainstorm Brainstorm better ways to cut recruiting time without reducing candidate experience.
 ```
-brainstorm/
-├── SKILL.md                    # Canonical skill instructions
-├── README.md                   # This file
-├── references/
-│   └── techniques.md           # Complete technique catalog (30+ methods)
-├── adapters/
-│   ├── chatgpt.md              # ChatGPT installation notes
-│   ├── codex.md                # OpenAI Codex installation notes
-│   ├── claude.md               # Claude installation notes
-│   ├── mistral.md              # Mistral Le Chat installation notes
-│   └── opencode.md             # OpenCode installation notes
-└── tests/
-    └── acceptance.md            # Manual acceptance test cases
+
+```text
+@super-mega-brainstorm Red-team this proposal and tell me what would make it fail.
 ```
 
-## Installation
+```text
+@super-mega-brainstorm Audit the evidence and logic behind this claim.
+```
 
-### Universal Installation (Recommended)
+When this workflow is installed and discoverable, **“Super Mega Brainstorm”** explicitly activates it. A generic **“brainstorm”** can also route here when the host recognizes the skill and no different named brainstorming skill takes precedence.
 
-The portable Agent Skills convention uses `.agents/skills/`:
+**Important:** Uploading a ZIP or publishing this repository **does not automatically install the plugin in ChatGPT** or publish it to ChatGPT's Plugin Directory. Account/workspace installation and public plugin sharing are separate from GitHub source distribution.
+
+## Running the standalone skill
+
+The underlying [portable skill](skills/super-mega-brainstorm-skill/) is included in full.
+
+For clients supporting Agent Plugins, use the repository's **root `plugin.json`** and the complete `skills/` directory according to that client's installation instructions.
+
+For clients supporting standalone skills, install the *entire* `skills/super-mega-brainstorm-skill/` folder into the location your host actually recognizes. Do not install just `SKILL.md`: the bundled reference files are required for a full run. Model-agnostic does not imply all hosts implement identical skill discovery.
+
+There is no hosted service, MCP server, account integration, or API key required for the *reasoning workflow*. Optional external verification may require whatever research tools the host provides.
+
+## Repository layout
+
+```text
+plugin.json                             Portable Agent Plugin manifest
+.codex-plugin/plugin.json               Codex/OpenAI-oriented metadata
+skills/super-mega-brainstorm-skill/
+  SKILL.md                              Full behavioral specification
+  references/                           Techniques, evidence, fallacies, formal logic
+  scripts/                              Optional checkers and validators
+  tests/                                Unit tests and scenario fixtures
+  docs/                                 Integration and verification history
+.github/workflows/ci.yml                Plugin-level continuous integration
+docs/INSTALLATION.md                     How to use the plugin and skill
+docs/PLUGIN_VS_SKILL.md                  Exact distinction between releases
+```
+
+## Verify the release locally
 
 ```bash
-# Clone or download this repository
-mkdir -p .agents/skills/
-# Copy the brainstorm folder to .agents/skills/brainstorm
-cp -R /path/to/brainstorm .agents/skills/brainstorm
+cd skills/super-mega-brainstorm-skill
+bash tests/run_tests.sh
 ```
 
-### Platform-Specific Paths
+The supplied plugin release candidate passed **45 unit tests**, package checks, and logic-checker smoke tests on October 31, 2026. These are structural and selected logical checks, **not scientific validation** or a promise of error-free reasoning.
 
-| Platform | Primary Path | Secondary Paths | Notes |
-|----------|--------------|-----------------|-------|
-| **OpenCode** | `.opencode/skills/` | `.claude/skills/`, `~/.config/opencode/skills/` | Use `/brainstorm` to invoke |
-| **Claude Code** | `.claude/skills/` | `~/.claude/skills/` | Directory name is the command |
-| **Cursor** | `.cursor/skills/` | `~/.cursor/skills/` | Use `/` in Agent chat |
-| **GitHub Copilot** | `.github/skills/` | `~/.copilot/skills/` | Automatic by description |
-| **Gemini CLI** | `.gemini/skills/` | `~/.gemini/skills/` | Use `activate_skill` tool |
-| **OpenAI Codex** | `.agents/skills/` | Up the tree, `/etc/codex/skills` | `$brainstorm` or `/skills` |
-| **Mistral Le Chat** | Varies | Varies | See adapter notes |
+## Origins and rights
 
-See individual adapter files for platform-specific details.
+Maintained by **Evan Zellner**. The v0.2.0 behavioral specification was developed with GPT-6; selected engineering and facilitation ideas from prior DeepSeek/OpenCode work were incorporated without replacing that specification. Refer to [the integration report](skills/super-mega-brainstorm-skill/docs/INTEGRATION_REPORT.md) and [source inventory](skills/super-mega-brainstorm-skill/references/source-inventory.md).
 
-## Activation
+This is an independent community project, **not an official or OpenAI-verified product**.
 
-The skill activates automatically when users:
-- Say **brainstorm**, ideate, ideas, options, possibilities
-- Ask for **names, titles, taglines, features, domain names**
-- Describe being **stuck** without asking a specific question
-- Use phrases like "what if", "how could we", "help me think through"
+**License:** The maintainer has not selected a license. Public visibility is **not** an open-source license and does not grant general rights to reproduce, modify, or redistribute this work. A license can be added by its owner later.
 
-## Operating Modes
-
-| Mode | Trigger | Options | Questions | Use Case |
-|------|---------|---------|-----------|----------|
-| **QUICK** | "10 names for...", casual requests | 4-6 | 0 (state assumptions) | Fast, low-context requests |
-| **STANDARD** | Default for "give me ideas for..." | 5-8 | ≤3 (missing context only) | Typical brainstorming |
-| **DEEP** | "help me think this through", big decisions | 8-12 (2 waves) | 1-2 rounds | Complex, high-stakes decisions |
-
-## Output Contract
-
-Every brainstorming session produces **exactly five sections** in this order:
-
-1. **Framing** — The actual problem being solved (1-2 sentences)
-2. **Options** — Structurally different ideas, each with:
-   - Bold 2-4 word name
-   - *mechanism: description*
-   - One-line pitch
-   - **Constraint line** (Costs, Gives up, Needs)
-   - Exactly one absurd option marked *(the absurd one)*
-3. **Kill list** — Discarded ideas with reasons ("Not doing X because Y")
-4. **Ranking** — Best → worst, with:
-   - Winner justified **against runner-up**
-   - **Overturn condition** (what would change the ranking)
-5. **Next action** — Chosen direction, single action, parked items
-
-## Offline Operation
-
-This skill is **fully offline** and requires:
-- ✅ No API keys
-- ✅ No external services
-- ✅ No internet access
-- ✅ No paid subscriptions
-- ✅ No proprietary dependencies
-
-All techniques, methodologies, and reference material are included locally.
-
-## Compatibility
-
-| Platform | Native Support | Tested | Notes |
-|----------|----------------|--------|-------|
-| OpenCode | ✅ Yes | ❌ No | Spec-conformant |
-| Claude Code | ✅ Yes | ❌ No | Spec-conformant |
-| Cursor | ✅ Yes | ❌ No | Spec-conformant |
-| GitHub Copilot | ✅ Yes | ❌ No | Spec-conformant |
-| Gemini CLI | ✅ Yes | ❌ No | Spec-conformant |
-| OpenAI Codex | ✅ Yes | ❌ No | Spec-conformant |
-| Mistral Le Chat | ⚠️ Varies | ❌ No | See adapter |
-
-**Note:** Compatibility is based on the [Agent Skills specification](https://agentskills.io). Actual behavior may vary by platform implementation and version.
-
-## Validation
-
-Run the included validation script to verify the skill package:
-
-```bash
-python3 validate_skill.py [/path/to/brainstorm]
-```
-
-This checks:
-- Required files exist
-- YAML frontmatter is valid
-- Skill name matches directory
-- Internal references resolve
-- All five output sections defined
-- Three operating modes preserved
-- Technique catalog present
-- No unexpected dependencies
-
-## Testing
-
-See `tests/acceptance.md` for manual acceptance test cases covering:
-- All three operating modes (QUICK, STANDARD, DEEP)
-- Various problem domains (naming, architecture, strategy)
-- Edge cases (insufficient context, redundant options)
-- Methodology requirements (absurd idea, kill list, ranking)
-
-## License
-
-No license has been assigned to this package. The original methodology and content are preserved as-is from the source material.
-
-## Files
-
-| File | Purpose |
-|------|---------|
-| `SKILL.md` | Canonical skill instructions (authoritative) |
-| `references/techniques.md` | Complete technique catalog (30+ methods) |
-| `adapters/*.md` | Platform-specific installation notes |
-| `tests/acceptance.md` | Manual acceptance test cases |
-| `validate_skill.py` | Automated validation script |
-| `CHANGELOG.md` | Change history and improvements |
-
-## Changelog
-
-See `CHANGELOG.md` for detailed change history.
-
-## Contributing
-
-This is a production-ready, validated skill package. Modifications should:
-1. Preserve the original methodology and contracts
-2. Maintain cross-platform compatibility
-3. Not introduce external dependencies
-4. Pass all validation checks
-
-## Support
-
-For issues or questions about this skill package, refer to the original methodology documentation in `SKILL.md` and the technique catalog in `references/techniques.md`.
+[Installation notes](docs/INSTALLATION.md) · [Plugin versus original skill](docs/PLUGIN_VS_SKILL.md)
