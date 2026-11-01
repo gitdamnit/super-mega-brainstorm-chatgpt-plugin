@@ -100,6 +100,6 @@ This project uses component-based licensing:
 
 See [licensing boundaries](LICENSES/README.md) and the [artwork notice](LICENSES/ARTWORK-NOTICE.md) for details. Both open licenses permit commercial use subject to their conditions. Third-party material retains its own terms.
 
-**Release note:** The complete legal texts must be bundled into the final distribution ZIP before publication. Licensing boundaries for mixed code-and-prose files should be reviewed during the final audit.
+The full legal texts are included in [`LICENSES/MPL-2.0.txt`](LICENSES/MPL-2.0.txt) and [`LICENSES/CC-BY-SA-4.0.txt`](LICENSES/CC-BY-SA-4.0.txt). Licensing boundaries for mixed code-and-prose files should be reviewed during the final audit. The distribution ZIP must be rebuilt to include these files.
 
 [Installation notes](docs/INSTALLATION.md) · [Plugin versus original skill](docs/PLUGIN_VS_SKILL.md)
