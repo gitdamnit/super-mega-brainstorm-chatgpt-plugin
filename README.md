@@ -3,6 +3,8 @@
 <img width="874" height="487" alt="image" src="https://github.com/user-attachments/assets/927aed46-a15f-4e21-a3a2-fe4c4140fbb3" />
 
 
+<img src="assets/icons/super-mega-brainstorm-icon-256.png" alt="Super Mega Brainstorm plugin icon: illustrated avatar with an oversized electrified brain" width="128" height="128" />
+
 ### The ChatGPT plugin for ideas that survive scrutiny.
 
 **Brainstorm without the bullshit.** Super Mega Brainstorm explores possibilities and then makes the reasoning earn its keep. It is a reusable workflow for strategic decisions, research, product design, technical planning, creative problems, and arguments that sound persuasive but might be completely wrong.
@@ -60,6 +62,8 @@ There is no hosted service, MCP server, account integration, or API key required
 ## Repository layout
 
 ```text
+assets/icons/                          Approved transparent PNG icons (64, 128, 256, 512)
+LICENSES/                              Full license texts and artwork notice
 plugin.json                             Portable Agent Plugin manifest
 .codex-plugin/plugin.json               Codex/OpenAI-oriented metadata
 skills/super-mega-brainstorm-skill/
