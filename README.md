@@ -88,6 +88,16 @@ Maintained by **Evan Zellner**. The v0.2.0 behavioral specification was develope
 
 This is an independent community project, **not an official or OpenAI-verified product**.
 
-**License:** The maintainer has not selected a license. Public visibility is **not** an open-source license and does not grant general rights to reproduce, modify, or redistribute this work. A license can be added by its owner later.
+## Licensing direction
+
+The project is evaluating a **component-based licensing approach**:
+
+- **Plugin software and integration code:** Mozilla Public License 2.0 (MPL-2.0).
+- **Original written brainstorming methodology, `SKILL.md`, and supporting reference materials:** Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0), subject to review of any executable or tightly integrated material.
+- **Avatar, promotional artwork, project name, and branding:** Rights reserved separately; no permission to reuse these assets is implied by the proposed software or documentation licenses.
+
+**Status: proposed, not yet adopted.** Until the appropriate license texts, file-level boundaries, third-party rights review, and repository metadata are finalized, the public repository should **not** be treated as already licensed under MPL-2.0 or CC BY-SA 4.0. Public visibility alone does not grant general permission to reproduce, modify, or redistribute copyrighted material. Commercial use would be permitted under both proposed licenses, subject to their respective terms.
+
+This split is intended to encourage reuse while requiring sharing of modifications to covered software files and adaptations of the written methodology. It does not confer ownership over abstract brainstorming techniques or prohibit independent implementations.
 
 [Installation notes](docs/INSTALLATION.md) · [Plugin versus original skill](docs/PLUGIN_VS_SKILL.md)
