@@ -13,3 +13,5 @@ For mixed files, executable code portions fall under MPL-2.0 and original prose 
 Both licenses allow commercial use subject to their conditions. Neither license gives exclusive rights over abstract ideas or methods.
 
 Complete license texts are included locally as `LICENSES/MPL-2.0.txt` and `LICENSES/CC-BY-SA-4.0.txt`. Include both in the final release archive.
+
+The copies are the plain-text originals published by [Mozilla](https://www.mozilla.org/media/MPL/2.0/index.f75d2927d3c1.txt) and [Creative Commons](https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt). The approved PNG icons under `assets/icons/` are covered by the artwork notice, not either open license. This file describes the project's intended licensing boundaries; mixed-content and third-party rights questions may require legal review.

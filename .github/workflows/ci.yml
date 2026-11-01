@@ -30,3 +30,7 @@ jobs:
       - name: Run full skill checks
         working-directory: skills/super-mega-brainstorm-skill
         run: bash tests/run_tests.sh
+      - name: Build and verify distribution
+        run: |
+          python3 scripts/release.py build "$RUNNER_TEMP/super-mega-brainstorm-chatgpt-plugin-v0.2.0.zip"
+          python3 scripts/release.py verify "$RUNNER_TEMP/super-mega-brainstorm-chatgpt-plugin-v0.2.0.zip"

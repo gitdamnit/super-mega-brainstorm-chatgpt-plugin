@@ -6,9 +6,11 @@
   "interface": {
     "capabilities": [],
     "category": "Other",
-    "defaultPrompt": null,
     "developerName": "Evan Zellner",
     "displayName": "Super Mega Brainstorm",
+    "composerIcon": "./assets/icons/super-mega-brainstorm-icon-64.png",
+    "logo": "./assets/icons/super-mega-brainstorm-icon-512.png",
+    "websiteURL": "https://github.com/gitdamnit/super-mega-brainstorm-chatgpt-plugin",
     "longDescription": "A reasoning-first brainstorming workflow that explores mechanisms, challenges assumptions, evaluates evidence, red-teams proposals, and applies a mandatory Advanced Smell Test and formal logic gate.",
     "shortDescription": "Brainstorm boldly. Audit ruthlessly."
   },

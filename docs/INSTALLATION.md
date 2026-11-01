@@ -19,5 +19,8 @@ bash tests/run_tests.sh
 
 Python is optional for the conversational workflow, but required to run the packaged test and checker scripts.
 
+## Build the release ZIP
+From a clean committed checkout, use `python3 scripts/release.py build /path/to/super-mega-brainstorm-chatgpt-plugin-v0.2.0.zip`. Verify it with `python3 scripts/release.py verify /path/to/super-mega-brainstorm-chatgpt-plugin-v0.2.0.zip`. Extract the ZIP before installing; keep its root `plugin.json` and full `skills/` tree together. The Codex compatibility manifest points at approved icons in `assets/icons/`.
+
 ## Limits
 The workflow does not guarantee truth. A structurally valid proof cannot establish empirical premise truth. Optional tests and checkers have intentionally limited scope. The package is neither an online service nor a proprietary AI model.

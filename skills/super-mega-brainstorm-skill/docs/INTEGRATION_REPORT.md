@@ -75,7 +75,9 @@ No v0.2.0 requirement was deleted or reworded to fit the older project.
 | MIT license vs. no license chosen | No license file or field; maintainer must choose. |
 | Categorical automation vs. manual countermodel authority | Separate optional finite-model checker with explicit limits; the manual method remains authoritative. |
 
-## Verification status
+## Verification status at the time of this integration report
+
+The paths below were local development evidence, not files in the current plugin distribution. Run the repository test suite and release verifier for current results. The licensing and Git statements below describe the earlier skill integration snapshot; the plugin repository now has committed history and component licenses in root `LICENSES/`.
 
 - Automated unit tests: see `docs/test-results.txt`.
 - Package validation: see `docs/validation.json`.
@@ -90,5 +92,5 @@ No v0.2.0 requirement was deleted or reworded to fit the older project.
 - The linter is structural; it cannot certify semantic quality or truth.
 - The categorical checker is a finite-model aid, not a general first-order prover.
 - No live-client or cross-model behavior has been verified.
-- No license has been chosen.
-- No Git history, commit, or publication exists.
+- At the time of this report, no license had been chosen for the standalone skill snapshot.
+- At the time of this report, that standalone snapshot had no Git history, commit, or publication.
